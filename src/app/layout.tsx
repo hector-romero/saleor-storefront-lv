@@ -4,6 +4,7 @@ import { Suspense, type ReactNode } from "react";
 import { type Metadata } from "next";
 import { DraftModeNotification } from "@/ui/components/DraftModeNotification";
 
+export const runtime = "edge";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
