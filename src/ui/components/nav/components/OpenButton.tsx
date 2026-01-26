@@ -14,7 +14,7 @@ export const OpenButton = (props: Props) => {
 			)}
 			aria-controls={props["aria-controls"]}
 			aria-expanded={false}
-			aria-label="Open menu"
+			aria-label="Abrir menú"
 			onClick={props.onClick}
 		>
 			<MenuIcon className="h-6 w-6 shrink-0" aria-hidden />

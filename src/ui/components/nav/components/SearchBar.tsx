@@ -16,7 +16,7 @@ export const SearchBar = ({ channel }: { channel: string }) => {
 			className="group relative my-2 flex w-full items-center justify-items-center text-sm lg:w-80"
 		>
 			<label className="w-full">
-				<span className="sr-only">buscar productos</span>
+				<span className="sr-only">Buscar productos</span>
 				<input
 					type="text"
 					name="search"
@@ -31,7 +31,7 @@ export const SearchBar = ({ channel }: { channel: string }) => {
 					type="submit"
 					className="inline-flex aspect-square w-10 items-center justify-center text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 group-invalid:pointer-events-none group-invalid:opacity-80"
 				>
-					<span className="sr-only">search</span>
+					<span className="sr-only">buscar</span>
 					<SearchIcon aria-hidden className="h-5 w-5" />
 				</button>
 			</div>

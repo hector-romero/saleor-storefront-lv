@@ -19,10 +19,14 @@ export const CartNavItem = async ({ channel }: { channel: string }) => {
 						lineCount > 9 ? "w-[3ch]" : "w-[2ch]",
 					)}
 				>
-					{lineCount} <span className="sr-only">item{lineCount > 1 ? "s" : ""} in cart, view bag</span>
+					{lineCount}{" "}
+					<span className="sr-only">
+						{lineCount}{" "}
+						{lineCount > 1 ? "artículos en el carrito, ver carrito" : "artículo en el carrito, ver carrito"}
+					</span>
 				</div>
 			) : (
-				<span className="sr-only">0 items in cart</span>
+				<span className="sr-only">0 artículos en el carrito</span>
 			)}
 		</LinkWithChannel>
 	);

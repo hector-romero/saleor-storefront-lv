@@ -12,7 +12,7 @@ export async function LoginForm() {
 					const password = formData.get("password")?.toString();
 
 					if (!email || !password) {
-						throw new Error("Email and password are required");
+						throw new Error("Correo electrónico y contraseña son requeridos");
 					}
 
 					const { data } = await (
@@ -27,25 +27,25 @@ export async function LoginForm() {
 			>
 				<div className="mb-2">
 					<label className="sr-only" htmlFor="email">
-						Email
+						Correo electrónico
 					</label>
 					<input
 						required
 						type="email"
 						name="email"
-						placeholder="Email"
+						placeholder="Correo electrónico"
 						className="w-full rounded border bg-neutral-50 px-4 py-2"
 					/>
 				</div>
 				<div className="mb-4">
 					<label className="sr-only" htmlFor="password">
-						Password
+						Contraseña
 					</label>
 					<input
 						required
 						type="password"
 						name="password"
-						placeholder="Password"
+						placeholder="Contraseña"
 						autoCapitalize="off"
 						autoComplete="off"
 						className="w-full rounded border bg-neutral-50 px-4 py-2"
@@ -56,7 +56,7 @@ export async function LoginForm() {
 					className="rounded bg-neutral-800 px-4 py-2 text-neutral-200 hover:bg-neutral-700"
 					type="submit"
 				>
-					Log In
+					Iniciar sesión
 				</button>
 			</form>
 			<div></div>

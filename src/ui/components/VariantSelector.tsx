@@ -22,7 +22,7 @@ export function VariantSelector({
 	return (
 		variants.length > 1 && (
 			<fieldset className="my-4" role="radiogroup" data-testid="VariantSelector">
-				<legend className="sr-only">Variants</legend>
+				<legend className="sr-only">Variantes</legend>
 				<div className="flex flex-wrap gap-3">
 					{variants.map((variant) => {
 						const isDisabled = !variant.quantityAvailable;

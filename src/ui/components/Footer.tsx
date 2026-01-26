@@ -76,7 +76,7 @@ export async function Footer({ channel }: { channel: string }) {
 				{channels?.channels && channels?.channels.length > 1 && (
 					<div className="mb-4 text-neutral-500">
 						<label>
-							<span className="text-sm">Change currency:</span> <ChannelSelect channels={channels.channels} />
+							<span className="text-sm">Cambiar moneda:</span> <ChannelSelect channels={channels.channels} />
 						</label>
 					</div>
 				)}

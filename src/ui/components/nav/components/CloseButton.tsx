@@ -14,7 +14,7 @@ export const CloseButton = (props: Props) => {
 			)}
 			aria-controls={props["aria-controls"]}
 			aria-expanded={true}
-			aria-label="Close menu"
+			aria-label="Cerrar menú"
 			onClick={props.onClick}
 		>
 			<XIcon className="h-6 w-6 shrink-0" aria-hidden />
