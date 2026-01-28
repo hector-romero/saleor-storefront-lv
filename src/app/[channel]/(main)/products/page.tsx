@@ -17,9 +17,12 @@ const getSortVariables = (sortParam?: string | string[]) => {
 
 	switch (sortValue) {
 		case "price-asc":
-			return { field: ProductOrderField.MinimalPrice, direction: OrderDirection.Asc };
+			return { field: ProductOrderField.Price, direction: OrderDirection.Asc };
 		case "price-desc":
-			return { field: ProductOrderField.MinimalPrice, direction: OrderDirection.Desc };
+			return { field: ProductOrderField.Price, direction: OrderDirection.Desc };
+		case "name-desc":
+			return { field: ProductOrderField.Name, direction: OrderDirection.Desc };
+		case "name-asc":
 		default:
 			return { field: ProductOrderField.Name, direction: OrderDirection.Asc };
 	}
