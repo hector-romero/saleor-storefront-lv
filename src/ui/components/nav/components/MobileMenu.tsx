@@ -30,7 +30,9 @@ export const MobileMenu = ({ children }: Props) => {
 							leaveTo="bg-transparent"
 						>
 							<Logo />
-							<CloseButton onClick={closeMenu} aria-controls="mobile-menu" />
+							<nav className="ml-[-100%] flex w-full gap-4 md:ml-0 md:w-full lg:gap-6">
+								<CloseButton onClick={closeMenu} aria-controls="mobile-menu" />
+							</nav>
 						</Transition.Child>
 						<Transition.Child
 							as={Fragment}

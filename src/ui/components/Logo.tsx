@@ -10,14 +10,14 @@ export const Logo = () => {
 
 	if (pathname === "/") {
 		return (
-			<h1 className="flex items-center font-bold" aria-label="inicio">
+			<h1 className="flex w-full items-center font-bold md:w-auto" aria-label="inicio">
 				{companyName}
 			</h1>
 		);
 	}
 	return (
-		<div className="flex items-center font-bold">
-			<LinkWithChannel aria-label="inicio" href="/">
+		<div className="flex w-full items-center font-bold md:w-auto">
+			<LinkWithChannel aria-label="inicio" className="w-full items-center text-center" href="/">
 				{companyName}
 			</LinkWithChannel>
 		</div>
