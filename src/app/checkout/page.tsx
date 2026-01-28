@@ -3,7 +3,7 @@ import { invariant } from "ts-invariant";
 import { RootWrapper } from "./pageWrapper";
 
 export const metadata = {
-	title: "Checkout · Saleor Storefront example",
+	title: "Pedido · VECTRA ESTUDIO",
 };
 
 export default async function CheckoutPage(props: {

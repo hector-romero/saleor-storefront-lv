@@ -8,8 +8,8 @@ import { getPaginatedListVariables } from "@/lib/utils";
 import { SortBy } from "@/ui/components/SortBy";
 
 export const metadata = {
-	title: "Products · Saleor Storefront example",
-	description: "All products in Saleor Storefront example",
+	title: "Productos · VECTRA ESTUDIO",
+	description: "Todos los productos de nuestro catalogo",
 };
 
 const getSortVariables = (sortParam?: string | string[]) => {
