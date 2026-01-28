@@ -3,9 +3,8 @@ import { executeGraphQL } from "@/lib/graphql";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
-	title: "VECTRA Storefront, powered by Saleor & Next.js",
-	description:
-		"Storefront Next.js Example for building performant e-commerce experiences with Saleor - the composable, headless commerce platform for global brands.",
+	title: "VECTRA ESTUDIO",
+	description: "Vectra Estudio - Diseño",
 };
 
 export default async function Page(props: { params: Promise<{ channel: string }> }) {
