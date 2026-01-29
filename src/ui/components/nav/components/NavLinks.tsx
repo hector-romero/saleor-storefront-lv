@@ -2,12 +2,23 @@ import Link from "next/link";
 import { NavLink } from "./NavLink";
 import { executeGraphQL } from "@/lib/graphql";
 import { MenuGetBySlugDocument } from "@/gql/graphql";
+import { fetchAllCategories } from "@/ui/components/nav/components/fetchAllCategories";
+import { CategoryLinks, buildCategoryTree } from "@/ui/components/nav/components/Categories";
 
 export const NavLinks = async ({ channel }: { channel: string }) => {
-	const navLinks = await executeGraphQL(MenuGetBySlugDocument, {
-		variables: { slug: "navbar", channel },
-		revalidate: 60 * 60 * 24,
-	});
+	const [navLinks, categories] = await Promise.all([
+		executeGraphQL(MenuGetBySlugDocument, {
+			variables: { slug: "navbar", channel },
+			revalidate: 60 * 60 * 24,
+		}),
+		fetchAllCategories(),
+	]);
+
+	const explicitCategorySlugs = new Set(
+		navLinks.menu?.items?.map((item) => item.category?.slug).filter(Boolean),
+	);
+
+	const tree = buildCategoryTree(categories, explicitCategorySlugs);
 
 	return (
 		<>
@@ -43,6 +54,8 @@ export const NavLinks = async ({ channel }: { channel: string }) => {
 				}
 				return null;
 			})}
+
+			<CategoryLinks tree={tree} />
 		</>
 	);
 };
