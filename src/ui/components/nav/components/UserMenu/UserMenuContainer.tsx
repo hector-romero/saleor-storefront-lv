@@ -4,7 +4,18 @@ import { CurrentUserDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 import { LinkWithChannel } from "@/ui/atoms/LinkWithChannel";
 
+function loginDisabled() {
+	// Toggle here to enable/disable the user menu at runtime.
+	// Using a function prevents the condition from being a compile-time constant
+	// which can trigger build-time hoisting/optimizations in some bundlers.
+	return true;
+}
+
 export async function UserMenuContainer() {
+	if (loginDisabled()) {
+		// Todo Login feature has been disabled
+		return null;
+	}
 	const { me: user } = await executeGraphQL(CurrentUserDocument, {
 		cache: "no-cache",
 	});

@@ -15,20 +15,24 @@ export const Nav = ({ channel }: { channel: string }) => {
 				<NavLinks channel={channel} />
 			</ul>
 			<div className="ml-auto flex items-center justify-center gap-4 whitespace-nowrap lg:gap-8">
-				<div className="hidden lg:flex">
+				<div className="hidden md:flex lg:flex">
 					<SearchBar channel={channel} />
 				</div>
-				<div className="hidden md:flex">
-					<Suspense fallback={<div className="w-8" />}>
-						<UserMenuContainer />
+				{false && (
+					<div className="md:flex- hidden">
+						<Suspense fallback={<div className="w-8" />}>
+							<UserMenuContainer />
+						</Suspense>
+					</div>
+				)}
+			</div>
+			{false && (
+				<div className="md:flex- hidden items-center">
+					<Suspense fallback={<div className="w-6" />}>
+						<CartNavItem channel={channel} />
 					</Suspense>
 				</div>
-			</div>
-			<div className="hidden items-center md:flex">
-				<Suspense fallback={<div className="w-6" />}>
-					<CartNavItem channel={channel} />
-				</Suspense>
-			</div>
+			)}
 			<Suspense>
 				<MobileMenu>
 					<div className="ml-auto flex w-full items-center justify-center gap-4 whitespace-nowrap lg:gap-8">
