@@ -8,7 +8,11 @@ export const CartNavItem = async ({ channel }: { channel: string }) => {
 	const checkout = checkoutId ? await Checkout.find(checkoutId) : null;
 
 	const lineCount = checkout ? checkout.lines.reduce((result, line) => result + line.quantity, 0) : 0;
-
+	// TODO Cart is disabled
+	if (true) {
+		return null;
+	}
+	// TODO Cart feature is disabled
 	return (
 		<LinkWithChannel href="/cart" className="relative flex items-center" data-testid="CartNavItem">
 			<ShoppingBagIcon className="h-6 w-6 shrink-0" aria-hidden="true" />

@@ -120,8 +120,10 @@ export default async function Page(props: {
 			},
 			cache: "no-cache",
 		});
-
-		revalidatePath("/cart");
+		if (false) {
+			// TODO Cart feature is disabled
+			revalidatePath("/cart");
+		}
 	}
 
 	const isAvailable = variants?.some((variant) => variant.quantityAvailable) ?? false;

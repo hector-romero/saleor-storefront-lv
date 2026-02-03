@@ -5,7 +5,10 @@ import { useFormStatus } from "react-dom";
 export function AddButton({ disabled }: { disabled?: boolean }) {
 	const { pending } = useFormStatus();
 	const isButtonDisabled = disabled || pending;
-
+	// TODO Cart is disabled
+	if (true) {
+		return null;
+	}
 	return (
 		<button
 			type="submit"
